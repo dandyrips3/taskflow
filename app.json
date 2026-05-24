@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "TaskFlow",
+    "slug": "taskflow-pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.dany64k.taskflow",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#000000"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "display": "standalone",
+      "shortName": "TaskFlow"
+    },
+    "plugins": [
+      "expo-notifications"
+    ]
+  }
+}
