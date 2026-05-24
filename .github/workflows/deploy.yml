@@ -1,0 +1,23 @@
+name: Build and Export
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Instalar dependencias
+        run: npm install
+      - name: Construir app
+        run: npx expo export -p web
+      - name: Subir resultado
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
