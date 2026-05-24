@@ -14,6 +14,8 @@ jobs:
           node-version: '20'
       - name: Instalar dependencias
         run: npm install
+      - name: Instalar complementos web
+        run: npx expo install react-dom react-native-web @expo/metro-runtime
       - name: Construir app
         run: npx expo export -p web
       - name: Subir resultado
